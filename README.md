@@ -8,7 +8,7 @@ Safe database migrations with column-level error handling.
 
 ## Installation
 ```bash
-composer require ubxty/ubxmigrations
+composer require ubxty/ubxmigrations --dev
 ```
 
 ## Features
