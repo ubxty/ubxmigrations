@@ -1,0 +1,29 @@
+{
+    "name": "ubxty/ubxmigrations",
+    "description": "Safe migration generator with column-level error handling",
+    "type": "library",
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^9.0|^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ubxmigrations\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ubxmigrations\\UbxMigrationsServiceProvider"
+            ]
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "UBXTY",
+            "email": "info@ubxty.com",
+            "homepage": "https://ubxty.com/"
+        }
+    ]
+}

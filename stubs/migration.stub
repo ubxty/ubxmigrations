@@ -1,0 +1,30 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        $columns = [
+            // Add your column definitions here
+            // Example:
+            // 'column_name' => fn($t) => $t->string('column_name')->nullable(),
+        ];
+
+        foreach ($columns as $name => $definition) {
+            try {
+                Schema::table('{{ table }}', fn($t) => $definition($t));
+            } catch (\Exception $e) {
+                echo "Skipped {$name}: {$e->getMessage()}" . PHP_EOL;
+            }
+        }
+    }
+
+    public function down(): void
+    {
+        // Optional rollback logic
+    }
+};
